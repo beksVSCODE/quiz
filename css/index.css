@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../media/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 20px;
+}
+.header{
+    height: 120px;
+    background: none;
+    user-select: none;
+}
+
+.header_logo{
+    pointer-events: none;
+    user-select: none;
+}
+
+.header__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 400px;
+}
+
+.header_ul > li{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 18px;
+    transition: all .3s ease-out;
+    height: 20px;
+    position: relative;
+}
+
+.header_ul > li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-100%, 0%);
+    transition: all .3s ease-out;
+    opacity: 0;
+}
+
+.header_ul > li:hover::after {
+    width: calc(100% + 14px);
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+
+.menu {
+    display: none;
+}
+
+.header-bmenu{
+    display: none;
+}
+
+.li-stats{
+    margin-left: 25px;
+}
+
+.btn-section > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    margin-bottom: 100px;
+    background: white;
+    width:333.85px;
+    height: 90.15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 81px;
+
+    color: #000000;
+    transition: 0.1s;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 11.2px 0 #8D8D8D;
+}
+.btn:active{
+    transform: translateY(-2px);
+    box-shadow: 0 3px 0 gray;
+}
+
+.footer{
+    width: 100%;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+a{
+    display: flex;
+    column-gap: 5px;
+}
+
+a > .footer-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 767.98px){
+    .menu {
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header-bmenu{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 99;    
+    }
+
+    .header_ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30px;
+        width: 320px;
+        height: calc(100vh - 120px);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        background: #fff;
+        padding: 60px 0px 0px 70px;
+        transform: translateX(100%);
+        transition: all .3s ease-out;
+    }
+    .header_ul::before {
+        content: "";
+        width: 100%;
+        height: 120px;
+        background: #fff;
+        position: absolute;
+        top: -120px;
+        right: 0;
+        border-top-left-radius: 90px;
+    }
+    .header_ul.active{
+        transform: translateX(0%);
+    }
+    .header_ul > li {
+        color: #000;
+        margin-bottom: 15px;
+    }
+    .header_ul > li::after {
+        display: none;
+    }
+    .li-stats {
+        margin: 0;
+    }
+    a {
+        color: #000;
+    }
+}
+
+@media (max-width: 450px){
+
+    .btn-section{
+        zoom: 0.9;
+    }
+
+    .btn-section > div{
+        margin-top: 60px;
+    }
+
+    .footer-links{
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 375.98px){
+    .btn-section{
+        zoom: 0.9;
+    }
+
+    .btn-section > div{
+        margin-top: -10px;
+    }
+
+    .footer-link{
+        zoom: 0.9;
+    }
+}

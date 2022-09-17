@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-image: url(../media/header-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 20px;
+}
+.header{
+    height: 105px;
+    background: none;
+    user-select: none;
+}
+
+.header_logo{
+    pointer-events: none;
+    user-select: none;
+}
+.transition-index{
+    transition: 0.4s;
+}
+.transition-index:hover{
+   transform: scale(1.03);
+}
+
+.header__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 400px;
+}
+
+.header_ul > li{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 18px;
+    transition: all .3s ease-out;
+    height: 20px;
+    position: relative;
+}
+
+.header_ul > li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-100%, 0%);
+    transition: all .3s ease-out;
+    opacity: 0;
+}
+
+.header_ul > li:hover::after {
+    width: calc(100% + 14px);
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+.menu {
+    display: none;
+}
+
+.header-bmenu{
+    display: none;
+}
+
+.li-stats{
+    margin-left: 25px;
+}
+
+/* .reviews_section > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+.reviews_box{
+    margin-top:0px;
+}
+.reviews_input{
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin-top:60px;
+}
+.reviews_input img{
+    transition: 0.2s;
+    border-radius:10px;
+}
+.reviews_input img:hover{
+    transform: scale(1.05);
+    background: rgb(105, 105, 198);
+}
+:root{
+    --white:#fff;
+}
+.reviews_logo{
+    font-family: 'Rubik Mono One';
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+    line-height: 62px;
+    letter-spacing: 0.06em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:3.5px var(--white)
+}
+.input_for_reviews{
+    width: 100%;
+    max-width: 600px;
+    height:80px;
+    border-radius: 8px;
+    border: none;
+    outline:none;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.951);
+    padding: 22px 19px;
+}
+
+.reviews_block{
+    width: 100%;
+    margin-top: 60px;
+    max-width: 683px;
+    padding: 20px 0px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+}
+.profile{
+display: flex;
+align-items: center;
+column-gap:12px;
+padding: 0px 34px 18px;
+}
+.profile img{
+    width: 65px;
+    height: 65px;
+}
+.profile h1{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+.for_text {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #262626;
+    padding: 0px 34px;
+    word-wrap: break-word;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767.98px){
+    .menu {
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header-bmenu{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 99;    
+    }
+
+    .header_ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30px;
+        width: 320px;
+        height: calc(100vh - 120px);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        background: #fff;
+        padding: 60px 0px 0px 70px;
+        transform: translateX(100%);
+        transition: all .3s ease-out;
+    }
+    .header_ul::before {
+        content: "";
+        width: 100%;
+        height: 120px;
+        background: #fff;
+        position: absolute;
+        top: -120px;
+        right: 0;
+        border-top-left-radius: 90px;
+    }
+    .header_ul.active{
+        transform: translateX(0%);
+    }
+    .header_ul > li {
+        color: #000;
+        margin-bottom: 15px;
+    }
+    .header_ul > li::after {
+        display: none;
+    }
+    .li-stats {
+        margin: 0;
+    }
+    a {
+        color: #000;
+    }
+   
+}
+
+@media (max-width: 500.98px){
+    .reviews_logo{
+        font-size: 35px; 
+     }
+    .for_text{
+        font-size: 15.5px;
+    }
+    .profile{
+        padding: 10px 34px;
+        }
+        .profile h1{
+            font-size: 20px;
+        }
+        .profile img{
+            width: 45px;
+            height: 45px;
+        }
+        ::placeholder{
+            font-size: 18px;
+        }
+        .container{
+            padding: 18px 5px;
+        }
+}

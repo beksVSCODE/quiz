@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background: url(../media/aboutus/о\ нас.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 20px;
+}
+.header{
+    height: 120px;
+    background: none;
+    user-select: none;
+}
+
+.header_logo{
+    pointer-events: none;
+    user-select: none;
+}
+.transition-index{
+    transition: 0.4s;
+}
+.transition-index:hover{
+   transform: scale(1.03);
+}
+
+.header__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    width: 400px;
+}
+
+.header_ul > li{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 18px;
+    transition: all .3s ease-out;
+    height: 20px;
+    position: relative;
+}
+
+.header_ul > li::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-100%, 0%);
+    transition: all .3s ease-out;
+    opacity: 0;
+}
+
+.header_ul > li:hover::after {
+    width: calc(100% + 14px);
+    transform: translate(-50%, 0%);
+    opacity: 1;
+}
+
+/* .header_ul .header_li.active.header_li a{
+    color: #656293;
+}  */
+
+.menu {
+    display: none;
+}
+
+.header-bmenu{
+    display: none;
+}
+
+.li-stats{
+    margin-left: 25px;
+}
+
+a{
+    display: flex;
+    column-gap: 5px;
+}
+
+a > .footer-text{
+    font-family: 'Roboto', sans-serif;
+}
+
+.section1_box{
+    margin: 120px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+:root{
+    --white:#fff;
+}
+.section1_left-title{
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:3.5px var(--white);
+  
+}
+.section1-left-line{
+    margin-top: 13px;
+    width:350px;
+    height: 1.4px;
+    background:rgb(255, 255, 255);
+}
+
+.section1_left-text{
+    font-family: 'Rubik Mono One';
+    font-weight:200;
+    font-size: 25px;
+    line-height: 31px;
+    letter-spacing: 0.06em;
+    margin: 80px 0 0 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:2px var(--white);
+   
+}
+
+
+.section1_right-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.section2_title{
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    letter-spacing: 0.06em;
+    margin: 130px 0 0 0;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:3.5px var(--white)
+}
+.section2_box{
+    margin-top: 230px;
+}
+.section2-bckg-box{
+    margin-top: 50px;
+    background: rgba(0, 0, 0, 0.47);
+    border-radius: 80px;
+}
+.section2_text{
+  
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.08em;
+   padding: 116px 71px;
+    text-align: center;
+}
+
+.section3_title{
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    letter-spacing: 0.06em;
+    margin: 130px 0 50px 0;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:2px var(--white)
+}
+
+.section3_cards{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.section3_cards-p1{
+    text-align: center;
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    letter-spacing: 0.06em;
+    margin-top: 30px;
+    /* margin-left: 50px; */
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:2px var(--white)
+}
+
+
+.card {
+    flex: 1 1 33.333%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    cursor: url("../media/aboutus/cursor.png"), auto;
+    border-radius: 5px;
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px 0px;
+    border-radius: 8px;
+    transition: all .35s ease-out;
+}
+
+.card:hover .card__content {
+    opacity: 0;
+    transform: rotateY(180deg);
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.info {
+    transform: rotateY(180deg);
+   transition: all .35s ease-out;
+   padding: 15px 25px;
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background: #002B6B;
+   color: #000;
+   border-radius: 50%;
+}
+:root{
+    --violet:#be1fef;
+}
+.info__title {
+    font-family: 'Rubik Mono One';
+    color: #8a27a8;
+    font-size: 24px;
+    margin-bottom: 20px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke:2px var(--violet)
+}
+
+.info__text {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.we_img{
+    width:70%;
+    height:auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer_tekst{
+    font-family: 'Rubik Mono One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.06em;
+    /* margin: 300px 0 100px 0; */
+    /* position: relative; */
+}
+.footer__contant {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
+}
+
+@media(max-width:960px){
+    .info {
+        border-radius: 8px;
+    }
+    .section2_text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 37px;
+        letter-spacing: 0.08em;
+       padding: 80px 15px;
+        text-align: center;
+    }
+    .we_img{
+        width:200px;
+        height:200px;
+    }
+    .section3_cards-p1{
+        font-family: 'Rubik Mono One';
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        line-height: 21px;
+        letter-spacing: 0.06em;
+        margin: 30px 0 0 20px;
+        /* margin-left: 50px; */
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:1.5px var(--white)
+    }
+    .section3_cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .section1_right-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
+/* @media (max-width: 888.98px){
+    .info__title {
+        font-family: 'Rubik Mono One';
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .info__text {
+        color: #000;
+        font-size: 15px;
+        text-align: center;
+    }
+} */
+@media (max-width: 778.98px){
+    .info__title {
+        font-family: 'Rubik Mono One';
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+    .info__text {
+        color: #000;
+        font-size: 15px;
+        text-align: center;
+    }
+}
+@media (max-width: 767.98px){
+    .menu {
+        width: 400px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header-bmenu{
+        display: block;
+        cursor: pointer;
+        position: relative;
+        z-index: 99;    
+    }
+    
+
+    .header_ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 30px;
+        width: 320px;
+        height: calc(100vh - 120px);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+        background: #fff;
+        padding: 60px 0px 0px 70px;
+        transform: translateX(100%);
+        transition: all .3s ease-out;
+    }
+    .header_ul::before {
+        content: "";
+        width: 100%;
+        height: 120px;
+        background: #fff;
+        position: absolute;
+        top: -120px;
+        right: 0;
+        border-top-left-radius: 90px;
+    }
+    .header_ul.active{
+        transform: translateX(0%);
+    }
+    .header_ul > li {
+        color: #000;
+        margin-bottom: 15px;
+    }
+    .header_ul > li::after {
+        display: none;
+    }
+    .li-stats {
+        margin: 0;
+    }
+    a {
+        color: #000;
+    }
+}
+@media(max-width:658px){
+    
+    .section2_text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 31px;
+        letter-spacing: 0.08em;
+       padding: 80px 15px;
+        text-align: center;
+    }
+        /* .we_img{
+            width:150px;
+            height:150px;
+        } */
+    .card {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    .section1_left-text{
+        font-family: 'Rubik Mono One';
+        font-weight:200;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.06em;
+        margin: 30px 0 0 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:1.5px var(--white)
+    }
+    .section1_left-title{
+        font-family: 'Rubik Mono One';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 0.06em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:3.5px var(--white)
+    }
+    .section1-left-line{
+        margin-top: 13px;
+        width:200px;
+        height: 1.4px;
+        background:rgb(255, 255, 255);
+    }
+    .section2_title{
+        font-family: 'Rubik Mono One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 62px;
+        letter-spacing: 0.06em;
+        margin: 130px 0 0 0;
+        text-align: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:3px var(--white)
+    }
+   
+   
+}
+@media(max-width:530px){
+    .section1-left-line{
+        display: none;
+    }
+    .we_img{
+        width:120px;
+        height:120px;
+    }
+    .section1_right-img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .section2_text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 31px;
+        letter-spacing: 0.08em;
+       padding: 80px 15px;
+        text-align: center;
+    }
+    .we_img{
+        width:150px;
+        height:150px;
+    }
+    .section1_left-text{
+        font-family: 'Rubik Mono One';
+        font-weight:200;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        margin: 20px 0 0 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:1.5px var(--white)
+    }
+    .section1_left-title{
+        font-family: 'Rubik Mono One';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:3.5px var(--white)
+    }
+    .section1-left-line{
+        margin-top: 13px;
+        width:200px;
+        height: 1.4px;
+        background:rgb(255, 255, 255);
+    }
+    .section2_title{
+        font-family: 'Rubik Mono One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 62px;
+        letter-spacing: 0.06em;
+        margin: 100px 0 0 0;
+        text-align: center;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke:3px var(--white)
+    }
+    .section2_text{
+        width: 100%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        padding: 50px 15px;
+        text-align: center;
+    }
+    .section3_cards{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 15px;
+    }
+    
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Allcategories/commonstyle-quiz.css">
+    <title>codify</title>
+</head>
+<body>
+    <main class="main">
+        <section class="section-one">
+            <div class="section-number">
+                <div class="section-circle-red"></div>
+                <div class="section-circle-orange"></div>
+                <div class="section-circle-white"></div>
+                <h3 class="section-title">Вопрос
+                    <span id="number-of-question"></span>
+                    из
+                    <span id="number-of-all-question"></span>
+                </h3>
+            </div>
+            <div class="container">
+                <div class="section-quiz">
+                    <div id="question" class="section-question"><h3></h3></div>
+                    <div class="section-answer">
+                        <button data-id="0" class="section-one-btn option1"></button>
+                        <button data-id="1" class="section-one-btn option2"></button>
+                        <button data-id="2" class="section-one-btn option3"></button>
+                        <button data-id="3" class="section-one-btn option4"></button>
+                    </div>
+                    <div class="button">
+                        <button id="btn-next">Далее</button>
+                    </div>
+                </div>
+                <div class="tracker">
+
+                </div>   
+            </div>
+        </section>
+	    <div class="quiz-over-modal">
+		    <div class="content">
+			    <h1>Результат</h1>
+			    <p class="quiz-over-modal__title">Ты ответил на
+				    <span id="correct-answer"></span> из
+				    <span id="number-of-all-question-2"></span> вопроса
+			    </p>
+			    <button id="btn-try-again">Попробуй снова</button>
+                <button id="btn-main-menu">Главное меню</button>
+		    </div>
+	    </div>
+        <script src="../js/codify.js"></script>
+    </main>
+
+</body>
+</html>
